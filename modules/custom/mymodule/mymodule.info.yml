@@ -1,0 +1,4 @@
+name: My first custom module
+description: 'Learn Drupal module making from Aquia'
+type: module
+core: '8.x'
