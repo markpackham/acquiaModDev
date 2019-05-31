@@ -1,4 +1,4 @@
 name: My first custom module
-description: 'Learn Drupal module making from Aquia'
+description: 'Learn Drupal module making from Aquia path /mymodule' 
 type: module
 core: '8.x'
