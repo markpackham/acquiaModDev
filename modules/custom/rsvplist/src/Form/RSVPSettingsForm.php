@@ -34,7 +34,7 @@ class RSVPSettingsForm extends ConfigFormBase
     /**
      * (@inheritdoc)
      */
-    public function buildForm(array &$form, FormStateInterface $form_state, Request $request = null)
+    public function buildForm(array $form, FormStateInterface $form_state, Request $request = null)
     {
         $types = node_type_get_names();
         $config = $this->config('rsvplist.settings');
