@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
  *
  * Alter the node add/edit form to include admin settings for displaying RSVPBlock with content
  */
-function rsvplist_form_node_form_alter(&$form, \Druapl\Core\Form\FormInterface $form_state, $form_id)
+function rsvplist_form_node_form_alter(&$form, $form_state, $form_id)
 {
     $node = $form_state->getFormObject()->getEntity();
     $current_node_type = $node->getType();
@@ -25,7 +25,7 @@ function rsvplist_form_node_form_alter(&$form, \Druapl\Core\Form\FormInterface $
             '#weight' => 100,
         );
         /** @var \Drupal\rsvplist\EnablerService $enabler */
-        $enable = \Drupal::service('rsvplist.enabler');
+        $enabler = \Drupal::service('rsvplist.enabler');
         $form['rsvplist']['rsvplist_enabled'] = array(
             '#type' => 'checkbox',
             '#title' => t('Collect RSVP email address for this node'),
